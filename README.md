@@ -1,20 +1,38 @@
-# MENUZ V3 CLAUDE
+# MenuzV3
 
-Clickable Stage 1 prototype of **Menuz Tableside**: a mobile web menu opened by QR/NFC that sells group packages ("The Round") and sends orders to a staff view.
+דמו חי של **Menuz Tableside** — תפריט מובייל שנפתח ב-QR, מוכר חבילת קבוצה, ושולח הזמנה למסך צוות.
 
-Single file, no build step, no dependencies. Open `index.html` in a browser (best on a phone-sized window).
+שלושה עסקים אמיתיים בראשון לציון, כל אחד עם סקין, תמונות ומנות שמתאימים למקום:
 
-## What's inside
-- Guest menu: dark, one-handed layout, allergen tags and filters, 18+/21+ notice
-- The Round: 2-12 people, live price, swaps with price delta, one-tap add
-- Cart, pay-at-table or simulated pay-now, server-side price re-check, idempotent submit, "Same again"
-- Staff view: live tickets, status flow, sold-out list, simple insights
-- Prototype tools: offline mode, failed payment, venue skins, bad table code, tampered-total test
+| עסק | סוג | כתובת |
+|---|---|---|
+| **דדה** | מסעדה גאורגית | הרצל 75 |
+| **שף עידן הלפרין** | חוויה קולינרית | מוצקין 5 |
+| **BEER TIME** | ביר הול | הרצל 47 |
 
-Open the page in two tabs (Guest and Staff) to see orders sync between them.
+## איך לפתוח
 
-## Not built yet
-Admin tool (venue/package editor, publish and rollback, QR/NFC export), real backend (Stripe, queue, printer, email), real service-worker offline cache.
+פתחו `index.html` בדפדפן, עדיף בחלון ברוחב טלפון. גם ב-GitHub Pages של הריפו.
 
-## Source briefs
-Executive delegation brief, PRD, user stories, system architecture and execution roadmap for Menuz Tableside (Stage 1, 8-week pilot).
+1. בחרו עסק
+2. בנו סופרה / The Round / שולחן השף
+3. שלחו הזמנה
+4. עברו לטאב **צוות** לראות את הכרטיס
+
+שני טאבים במקביל עובדים כי הכרטיסים נשמרים ב-`localStorage`.
+
+## מה אמיתי ומה דמו
+
+- **דדה** ו-**BEER TIME**: שמות מנות ומחירים לפי מחירונים פומביים (Wolt / BestRest). לא הזמנה חיה ולא POS.
+- **שף עידן הלפרין**: אין תפריט פומבי מלא. התפריט כאן הוא דמו בסגנון המקום לפי כרטיס Google.
+- אין סליקה אמיתית, אין שליחה למטבח.
+
+## מה כבר עובד ב-Stage 1
+
+- בחירת עסק / סקין
+- תפריט RTL, אלרגנים, 18+, סימון אזל
+- חבילת קבוצה עם החלפות ומחיר חי
+- סל, תשלום בשולחן או דמו
+- מסך צוות: חדש → מוכן → הוגש
+
+מקור הפרוטוטייפ והבריפים נשארו בריפו.
